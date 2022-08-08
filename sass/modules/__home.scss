@@ -1,0 +1,81 @@
+.home {
+    .aboutme {
+        h2 {
+            font-size: 1.25rem;
+            text-transform: uppercase;
+        }
+        h3 {
+            font-size:3rem;
+
+        }
+    }
+
+    .servicesection {
+        h2 {
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            text-align:center;
+        }
+        h3 {
+            font-size:3rem;
+            text-align:center;
+        }
+        .services {
+            margin:10vh 0;
+            display: flex;
+            flex-wrap: wrap;
+            background: $primary-color;
+            background: linear-gradient(to bottom,  $primary-color 0%, darken($primary-color, 35%) 100%);
+            border-radius:5px;
+            @include box-shadow;
+            .service {
+                flex: 1 0 calc(33% - 4rem);
+                padding:1rem;
+                text-align:center;
+                min-height:250px;
+                position: relative;
+                transition: all .25s ease-out 0s;
+                color:#fff;
+                border:1px solid rgba(255,255,255,.1);
+                &.top {
+                    top:-50px;
+                }
+                .content {
+                    width:80%;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    h2 {
+                        font-size: 1.25rem;
+                        font-weight: bold;
+                    }
+                    .icon {
+                        height:50px;
+                        width:50px;
+                        position: relative;
+                        margin:1rem auto;
+                        padding:.5rem;
+                        i {
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                            font-size:2.5rem;
+                            color:#fff;
+                        }
+                    }
+                }
+                &:hover {
+                    background-color:#fff;
+                    color:$text-color;
+                    .icon {
+                        i {
+                            color:$primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.about {
+    .aboutme, .chooseme {
+        margin: 10vh 0;
+    }
+    .me {
+        background-color:$primary-color;
+        border-radius:50%;
+        overflow:hidden;
+        padding:.5rem;
+        img {
+            width:100%;
+            height:auto;
+        }
+    }
+}

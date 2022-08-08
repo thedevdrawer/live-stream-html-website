@@ -1,0 +1,39 @@
+.portfolio {
+    .chooseme {
+        margin: 20vh 0;
+        transform:scale(1);
+        .imageblock {
+            display: block;
+            overflow: hidden;
+            border-radius:15px;
+            max-width:90%;
+            margin:0 auto;
+            position: relative;
+            span {
+                background: $primary-color;
+                background: linear-gradient(to bottom,  $primary-color 0%, darken($primary-color, 35%) 100%);
+                padding:3rem 2rem;
+                color:#fff;
+                position: absolute;
+                z-index:1;
+                bottom:1rem;
+                right:-200vw;
+                border-radius:15px 0 0 15px;
+                text-transform:uppercase;
+                transition: all .5s ease-out 0s;
+                opacity:.9;
+                &.active {
+                    right:0;
+                }
+            }
+        }
+        img {
+            max-width:100%;
+            transform: scale(1);
+            transition: all .5s ease-in-out 0s;
+            &:hover {
+                transform:scale(1.05);
+            }
+        }
+    }
+}

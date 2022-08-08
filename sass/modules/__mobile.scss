@@ -1,0 +1,165 @@
+@media screen and (max-width: 844px) {
+    .belowhero .herocta {
+        flex: 1 0 calc(50% - 4rem);
+        margin: 1rem;
+    }
+    .servicesection .services .service {
+        flex: 1 0 calc(50% - 4rem);
+    }
+
+    .pricing .pricing-table .price {
+        flex: 1 0 calc(100% - 4rem);
+        margin: 2rem 0.5rem;
+
+        .content .btn {
+            width: calc(100% - 10rem);
+        }
+    }
+}
+
+@media screen and (max-width:844px) and (orientation:landscape) {
+    header {
+        position: relative;
+        background-color:$primary-color;
+    }
+    .centerdiv {
+        position: relative;
+        top:initial;
+        left:initial;
+        transform: none;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+        span {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 390px) {
+    header {
+        .logo img {
+            top: 1rem;
+            transform: none;
+        }
+        nav, .subheader {
+            display:none;
+        }
+        .mobilemenu {
+            display:block;
+            i {
+                font-size:3rem;
+                color:#fff;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                z-index:10
+            }
+            nav {
+                display:none;
+                position: fixed;
+                background-color:rgba(0,0,0,.9);
+                left:0;
+                right:0;
+                bottom:0;
+                top:0;
+                img {
+                    max-width:100px;
+                    display:block;
+                    margin:1rem auto;
+                    margin-top:10rem;
+                }
+                li {
+                    display:block;
+                    text-align:center;
+                    margin-right:0;
+                }
+                &.active {
+                    display:block;
+                }
+            }
+        }
+    }
+    .hero {
+        h1 {
+            font-size: 2.5rem;
+        span {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .centerdiv {
+        position: relative;
+        top: 20vh;
+        left:initial;
+        transform: none;
+        width: 100%;
+    }
+
+    .belowhero .herocta {
+        flex: 1 0 calc(100% - 4rem);
+        margin-bottom:5rem;
+        &.top {
+            top:0;
+        }
+        top:0;
+        .content {
+            .btn {
+                visibility: visible;
+                top: 105%;
+            }
+        }
+    }
+
+    .btn {
+        width:calc(100% - 6rem);
+    }
+
+    .aboutme h3, .servicesection h3, .pricing h3, .chooseme h3 {
+        font-size: 2rem;
+    }
+
+    .chooseme {
+        h2, h3, strong {
+        text-align:center;
+        display:block;
+        }
+    }
+
+    .row img {
+        margin:1rem 0;
+    }
+
+    .home .servicesection .services .service {
+        flex: 1 0 calc(100% - 4rem);
+    }
+
+    .brands {
+        margin: 10rem 0;
+        margin-top:5rem;
+    }
+
+    .pricing .pricing-table {
+        width:calc(100% - 3.5rem);
+        .price .content .btn {
+            width: calc(100% - 6rem);
+        }
+    }
+
+    .chooseme .section.active {
+        height: auto;
+    }
+
+    .footerinfo .col-12{
+        margin:1rem 0;
+    }
+
+    footer .footer-social li {
+        margin: 1rem;
+    }
+
+    footer .footerlogo {
+        margin: 1rem auto;
+    }
+}

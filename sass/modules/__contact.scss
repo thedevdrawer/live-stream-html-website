@@ -1,0 +1,36 @@
+#getstarted {
+    margin:10vh 0;
+    margin-bottom:20vh;
+    .info {
+        background: $primary-color;
+        background: linear-gradient(to bottom,  $primary-color 0%, darken($primary-color, 35%) 100%);
+        padding:3rem;
+        width:calc(100% - 7rem);
+        border-radius:15px;
+        color:lighten($primary-color, 20%);
+        h2, p {
+            color:#fff;
+        }
+        @include box-shadow;
+        i {
+            font-size:2rem;
+        }
+        a {
+            color:#fff;
+            font-weight:bold;
+            &:hover {
+                color:#fff;
+            }
+        }
+        .row {
+            margin:1rem 0;
+        }
+    }
+}
+iframe.contactform {
+    width:100vw;
+    height:500px;
+    position: absolute;
+    display:block;
+    z-index:0;
+}

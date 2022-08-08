@@ -1,0 +1,279 @@
+.hero {
+    text-align:center;
+    background: $primary-color;
+    background: linear-gradient(to bottom,  $primary-color 0%, darken($primary-color, 35%) 100%);
+    min-height:70vh;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    h1 {
+        width:100%;
+        color:#fff;
+        font-size: 5.5rem;
+        font-weight: bolder;
+        margin-bottom: 1rem;
+        span {
+            color:lighten($primary-color,25%);
+            display:block;
+            font-size: 3.5rem;
+            line-height: 3rem;
+            font-style: italic;
+        }
+    }
+    p {
+        color:#fff;
+        a {
+            display:block;
+            margin-top:8vh;
+            i {
+                font-size:3rem;
+                color:#fff;
+            }
+        }
+    }
+}
+
+.home .hero {
+    min-height:100vh;
+}
+
+.brands {
+    margin:10rem 0;
+    div {
+        position: relative;
+    }
+    img {
+        filter: brightness(0) invert(0);
+        opacity: .25;
+        max-width:80%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transition: all .25s ease-out 0s;
+        &:hover {
+            filter:none;
+            opacity:1;
+        }
+    }
+}
+
+.pricing {
+    margin:10vh 0;
+    margin-bottom:20vh;
+    h2 {
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        text-align:center;
+    }
+    h3 {
+        font-size:3rem;
+        text-align:center;
+    }
+    .pricing-table {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top:10vh;
+        @include container;
+        .price {
+            flex: 1 0 calc(25% - 4rem);
+            margin: 0 .5rem;
+            padding:1rem 2rem;
+            background-color:#fff;
+            text-align:center;
+            border-radius: 20px;
+            padding-bottom:80px;
+            position: relative;
+            transition: all .25s ease-out 0s;
+            top:0;
+            @include box-shadow;
+            .content {
+                width:85%;
+                margin:0 auto;
+                h2 {
+                    font-size: 2.25rem;
+                    font-weight: bold;
+                    color:$primary-color;
+                    span {
+                        font-size: 1.25rem;
+                        font-weight: normal;
+                        position:relative;
+                        top:-1rem;
+                    }
+                }
+                h3 {
+                    font-size: 1.2rem;
+                    font-weight: normal;
+                    opacity: .6;
+                }
+                .icon {
+                    height:50px;
+                    width:50px;
+                    position: relative;
+                    margin:1rem auto;
+                    padding:2rem;
+                    opacity: .6;
+                    i {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size:4.5rem;
+                    }
+                }
+                hr {
+                    border:0px;
+                    border-top:1px solid lighten($text-color, 70%);
+                    margin:1rem 0;
+                }
+                ul {
+                    list-style-type: none;
+                    padding:0;
+                    margin:0;
+                    li {
+                        margin-bottom:1rem;
+                    }
+                }
+                .btn {
+                    width:calc(100% - 6rem);
+                    color:#fff;
+                    position:absolute;
+                    top:95%;
+                    left:7%;
+                    transition: all 0.05s linear;
+                    text-align:left;
+                    padding-right:1.5rem;
+                    background-color:$primary-color;
+                    &:hover {
+                        background-color:#fff;
+                        color:$primary-color;
+                    }
+                }
+            }
+            &:hover {
+                top:-2rem;
+            }
+        }
+    }
+}
+
+.chooseme {
+    h2 {
+        font-size: 1.25rem;
+        text-transform: uppercase;
+    }
+    h3 {
+        font-size:3rem;
+    }
+    .section {
+        background-color:#fff;
+        padding:1rem;
+        position: relative;
+        border-radius:15px;
+        margin:1.5rem 0;
+        height:25px;
+        transition: all .15s ease-out 0s;
+        
+        cursor: pointer;
+        @include box-shadow;
+        i {
+            font-size:2rem;
+            position: relative;
+            top:-.75rem;
+            float:right;
+            color:$primary-color
+        }
+        .sectioncontent {
+            visibility: hidden;
+        }
+        &.active {
+            height:150px;
+            strong {
+                color:$primary-color;
+            }
+            .sectioncontent {
+                visibility: visible;
+            }
+        }
+    }
+}
+
+.belowhero {
+    position: relative;
+    top:-15vh;
+    display: flex;
+    flex-wrap: wrap;
+    @include container;
+    .herocta {
+        flex: 1 0 calc(25% - 4rem);
+        margin: 0 .5rem;
+        padding:1rem;
+        background-color:#fff;
+        text-align:center;
+        border-radius: 20px;
+        min-height:250px;
+        position: relative;
+        transition: all .25s ease-out 0s;
+        @include box-shadow;
+        &.top {
+            top:-50px;
+        }
+        .content {
+            width:80%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            h2 {
+                font-size: 1.25rem;
+                font-weight: bold;
+            }
+            .icon {
+                border-radius:50%;
+                background-color:$primary-color;
+                height:50px;
+                width:50px;
+                position: relative;
+                margin:1rem auto;
+                padding:.5rem;
+                i {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size:1.5rem;
+                    color:#fff;
+                }
+            }
+            .btn {
+                visibility: hidden;
+                width:calc(100% - 3rem);
+                color:$secondary-color;
+                position:absolute;
+                top:110%;
+                left:0;
+                transition: all 0.05s linear;
+                text-align:left;
+                padding-right:1.5rem;
+            }
+        }
+        &.active {
+            background-color:$primary-color;
+            color:#fff;
+            .icon {
+                background-color:#fff;
+                i {
+                    color:$primary-color;
+                }
+            }
+            .btn {
+                visibility: visible;
+                top:105%;
+                &:hover {
+                    background-color:#fff;
+                }
+            }
+        }
+    }
+}
